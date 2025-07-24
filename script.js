@@ -1,15 +1,21 @@
-const slider = document.getElementById(slider);
+const images = [];
 
-function getRandomImage() {
-  const randomNum = Math.floor(Math.random() * 1000); // رقم عشوائي
-  return `https://source.unsplash.com/800x600/?nature&sig=${rand}`;
+for (let i = 1; i <= 20; i++) {
+  images.push(`images/img${i}.jpg`);
 }
 
-// حمّل أول صورة
-slider.src = getRandomImage();
+let current = 0;
+const slider = document.getElementById("slider");
 
-// بدّل كل 3 ثواني
-setInterval(() => {
-  slider.src = getRandomImage();
-}, 3000);
+function showNextImage() {
+  current = (current + 1) % images.length;
+  slider.src = images[current];
+}
+
+// أول صورة
+slider.src = images[current];
+
+// التبديل التلقائي كل 3 ثواني
+setInterval(showNextImage, 3000);
+
 

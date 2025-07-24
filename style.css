@@ -1,11 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #111;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 
 #slider {
   width: 100%;
-  height: auto;
   display: block;
 }
+
 
