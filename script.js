@@ -2,7 +2,7 @@ const slider = document.getElementById(slider);
 
 function getRandomImage() {
   const randomNum = Math.floor(Math.random() * 1000); // رقم عشوائي
-  return ;
+  return `https://source.unsplash.com/800x600/?nature&sig=${rand}`;
 }
 
 // حمّل أول صورة
